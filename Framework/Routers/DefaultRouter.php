@@ -1,5 +1,5 @@
 <?php
-namespace FTS\Routers;
+namespace Framework\Routers;
 class DefaultRouter implements IRouter
 {
     public function getURI()

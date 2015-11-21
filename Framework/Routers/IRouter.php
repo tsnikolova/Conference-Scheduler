@@ -1,5 +1,5 @@
 <?php
-namespace FTS\Routers;
+namespace Framework\Routers;
 interface IRouter
 {
     /**
