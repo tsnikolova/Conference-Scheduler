@@ -1,5 +1,5 @@
 <?php
-namespace FTS;
+namespace Framework;
 use Framework\DB\SimpleDB;
 use Framework\Routers\DefaultRouter;
 use Framework\Routers\IRouter;
