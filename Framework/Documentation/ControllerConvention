@@ -1,0 +1,24 @@
+File names should follow:
+
+Area(optional)
+    NameController
+
+Example:
+Admin
+    IndexController
+
+Example without Area
+SomeController
+
+All method should have documentation example:
+/**
+* @Post
+* @Authorize
+* @Admin
+* @Route("")
+* @param \LoginBindingModel $model
+* @throws \Exception
+*/
+
+@Authorize, @Admin, @param (for binding models) are required. @Post and @Route
+are optional and can be set by config. For more info check Annotations.

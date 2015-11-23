@@ -1,0 +1,5 @@
+Class Injector can be used for dependency injections.
+It supports custom config name. The default one is 'inject'.
+In that config must be given - property name and injection namespace.
+Example:
+$cnf['Validator'] = 'FTS\Validator';

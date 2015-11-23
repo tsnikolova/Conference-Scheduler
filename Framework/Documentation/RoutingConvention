@@ -1,0 +1,22 @@
+Default Routing is 'package/controller/method/param[0]/param[1]'
+
+It can be override with annotations.
+
+Example: @Route("Custom/{id:int}/Route") - where in '{ ValueName : Type (int, string) }' can be placed param.
+
+Custom routers can be given using the fluent App class.
+Example: App::getInstance()->setRouter(new DummyRouter());
+NOTE this must be done BEFORE the app is running. At that point there is no autoloader, so you have to include
+the files yourself.
+
+When used Config for routing it requires to have
+GoesTo, Method, Function. Example:
+const GOES_TO = 'goesTo'; // witch controller it goes to
+const METHODS = 'methods';
+const REQUEST_METHOD = 'requestMethod';
+const NS = 'namespace';
+const CONTROLLERS = 'controllers';
+
+$cnf['*'][CONTROLLERS]['user'][GOES_TO] = 'user';
+$cnf['*'][CONTROLLERS]['user'][METHODS]['login'] = 'login';
+$cnf['*'][CONTROLLERS]['user'][REQUEST_METHOD]['login'] = 'post';

@@ -1,0 +1,7 @@
+Binding models can must be in Models/BindingModels, there name can be
+any, but it has to end with 'BindingModel'.
+Example:
+"LoginBindingModel"
+
+Binding models should have construct accepting array - in that array will be
+passed all properties as key (name) => value (value).

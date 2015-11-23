@@ -1,0 +1,11 @@
+Views and ViewModels should follow the same namespace structure as Controllers and
+Binding Models.
+
+Example:
+If the controller is in Admin/IndexController
+Then the views for that controller should be in Admin/IndexController/{Method}
+Then the viewModels for that controller should be in Admin/IndexController/{Method}ViewModel
+
+Layouts should be in Layouts, but the structure is up to the programmer.
+Partials can be put anywhere, as long as the proper path is given in the api.
+Errors must be in 'Errors' with name - the error code.

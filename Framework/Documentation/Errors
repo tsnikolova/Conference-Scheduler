@@ -1,0 +1,9 @@
+Errors handler uses app config for enabling and disabling exceptions. Recommended to use false for production.
+Optionally can be used config 'errors' for custom error messages. If any message given it will be used, unless
+it is 'message'. In that case it will be used exceptions message to be displayed to the users.
+
+Example:
+
+$cnf[400] = 'message';
+$cnf[401] = 'Unauthorized!';
+$cnf[404] = 'Not Found!';

@@ -1,0 +1,20 @@
+@Authorize - check if the current user is logged in. If not Access is declines with 401.
+Custom message can be given.
+Example:
+@Authorize error:("Error message")
+
+@Admin = checks if the current user is Admin.If not Access is declines with 401.
+Example:
+@Admin
+
+@Route("") - check routing conventions
+
+@Post, @Get, @Delete, @Put (can be added more) - allow the function to be called
+only if they the caller is that request type. Can also be given in config,
+if none given it will be @Get.
+Annotations override config.
+
+@Role("Name") - checks the default db (can be customized) for user with field isName
+Example:
+@Role("Editor") checks db for - isEditor. If found gives access or not depending if
+the user logged user is that role. Else throws exception.
