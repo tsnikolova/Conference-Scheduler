@@ -88,9 +88,9 @@ class SimpleDB
     {
         return $this->_statement;
     }
-    public static function isAdmin()
+    public static function isSiteAdmin()
     {
-        $statement = self::$database->prepare("SELECT isAdmin
+        $statement = self::$database->prepare("SELECT isSiteAdmin
                       FROM users
                       WHERE username = ? AND id = ?");
         $statement->bindParam(1, App::getInstance()->getSession()->_username);
@@ -98,7 +98,7 @@ class SimpleDB
         $statement->execute();
         $response = $statement->fetch(\PDO::FETCH_ASSOC);
         if ($response) {
-            return Normalizer::normalize($response['isAdmin'], 'bool');
+            return Normalizer::normalize($response['$isSiteAdmin'], 'bool');
         }
         return false;
     }

@@ -162,9 +162,9 @@ class App
     {
         return $this->_session->escapedUsername !== null;
     }
-    public function isAdmin()
+    public function isSiteAdmin()
     {
-        return SimpleDB::isAdmin();
+        return SimpleDB::isSiteAdmin();
     }
     public function isEditor()
     {
